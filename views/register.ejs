@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex items-center justify-center px-4 text-gray-900">
+    <div class="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 sm:p-10 max-w-sm w-full border border-gray-300 hover:shadow-3xl transition-shadow duration-500">
+      
+      <!-- Avatar / App Logo -->
+      <div class="flex justify-center mb-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Avatar" class="w-12 h-12 rounded-full shadow-md" />
+      </div>
+
+      <!-- Heading -->
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-6 tracking-wide">
+        Create your account
+      </h2>
+
+      <form action="/register" method="POST" class="space-y-6">
+        <!-- Name -->
+        <div class="relative">
+          <input
+            id="name"
+            type="text"
+            name="name"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+          <label for="name" class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none">
+            Full Name
+          </label>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="relative">
+          <input
+            id="dateOfBirth"
+            type="date"
+            name="dateOfBirth"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+          <label for="dateOfBirth" class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none">
+            Date of Birth
+          </label>
+        </div>
+
+        <!-- Username -->
+        <div class="relative">
+          <input
+            id="username"
+            type="text"
+            name="username"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+          <label for="username" class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none">
+            Username
+          </label>
+        </div>
+
+        <!-- Email -->
+        <div class="relative">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+          <label for="email" class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none">
+            Email
+          </label>
+        </div>
+
+        <!-- Password -->
+        <div class="relative">
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+          <label for="password" class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none">
+            Password
+          </label>
+        </div>
+
+        <!-- Register Button -->
+        <button
+          type="submit"
+          class="w-full py-3 rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-semibold shadow-md transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400 active:scale-95"
+        >
+          ✅ Register
+        </button>
+      </form>
+
+      <!-- Footer Links -->
+      <div class="flex flex-col items-center mt-6 space-y-3 text-sm text-gray-700">
+        <p>
+          Already have an account?
+          <a href="/login" class="text-blue-700 hover:underline font-medium transition">Login here</a>.
+        </p>
+        <p>
+          Back to <a href="/" class="text-blue-700 hover:underline font-medium transition">Home</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

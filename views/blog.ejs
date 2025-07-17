@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Blog Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 min-h-screen text-gray-900">
+    <!-- Page Container -->
+    <div class="flex flex-col items-center justify-center px-4 py-10 min-h-screen">
+      <!-- Creator Header -->
+      <div class="mb-8 text-center">
+        <div class="flex flex-col items-center">
+          <img src="https://i.pravatar.cc/100" alt="User Avatar" class="w-16 h-16 rounded-full border-2 border-blue-500 shadow-md" />
+          <p class="mt-2 text-lg text-gray-100 font-semibold">Hello, Creator!</p>
+        </div>
+      </div>
+
+      <!-- Blog Form Card -->
+      <div class="bg-white/90 rounded-3xl shadow-2xl p-10 max-w-xl w-full border border-gray-200 backdrop-blur-sm">
+        <h1 class="text-3xl font-extrabold text-center text-gray-900 mb-6 tracking-tight">
+          📝 Create a Blog Post
+        </h1>
+
+        <form action="/blog" method="POST" class="space-y-6">
+          <!-- Blog Title -->
+          <div>
+            <label for="title" class="block text-gray-800 font-semibold mb-1">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="What's your blog title?"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 bg-gray-50 transition"
+            />
+          </div>
+
+          <!-- Blog Content -->
+          <div>
+            <label for="content" class="block text-gray-800 font-semibold mb-1">Content</label>
+            <textarea
+              name="content"
+              id="content"
+              rows="6"
+              placeholder="Share your thoughts..."
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 bg-gray-50 resize-none transition"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex flex-col gap-4">
+            <button
+              type="submit"
+              class="w-full py-3 rounded-xl bg-blue-700 hover:bg-blue-800 active:scale-95 text-white font-bold shadow-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            >
+              🚀 Publish Blog
+            </button>
+
+            <a
+              href="/viewBlog"
+              class="w-full inline-block text-center py-3 rounded-xl bg-gray-700 hover:bg-gray-800 active:scale-95 text-white font-bold shadow-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            >
+              👀 View Blogs
+            </a>
+          </div>
+        </form>
+
+        <!-- Optional Links -->
+        <div class="mt-6 text-center text-sm text-gray-600 space-y-2">
+          <p>
+            <a href="/" class="text-blue-700 hover:underline font-medium transition">⬅ Back to Dashboard</a>
+          </p>
+          <p>
+            <a href="/logout" class="text-blue-700 hover:underline font-medium transition">⏻ Logout</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

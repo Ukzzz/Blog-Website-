@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex items-center justify-center px-4 text-gray-900">
+    <div class="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 sm:p-10 max-w-sm w-full border border-gray-300 hover:shadow-3xl transition-shadow duration-500">
+      <!-- App Logo -->
+      <div class="flex justify-center mb-6">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="App Logo" class="w-12 h-12 rounded-full shadow-md" />
+      </div>
+
+      <!-- Header -->
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-6 tracking-tight">Sign in to your account</h2>
+
+      <!-- Form -->
+      <form action="/login" method="POST" class="space-y-6">
+        <!-- Email Field -->
+        <div class="relative">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition text-sm"
+          />
+          <label
+            for="email"
+            class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none"
+          >
+            Email
+          </label>
+        </div>
+
+        <!-- Password Field -->
+        <div class="relative">
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+            placeholder=" "
+            class="peer w-full px-4 pt-5 pb-2 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition text-sm"
+          />
+          <label
+            for="password"
+            class="absolute left-4 top-2 text-gray-500 text-sm peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600 transition-all pointer-events-none"
+          >
+            Password
+          </label>
+        </div>
+
+        <!-- Login Button -->
+        <button
+          type="submit"
+          class="w-full py-3 rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-semibold shadow-md transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400 active:scale-95"
+        >
+          🔓 Login
+        </button>
+      </form>
+      <!-- Footer Links -->
+      <div class="flex flex-col items-center mt-6 space-y-3 text-sm text-gray-700">
+        <p>
+          Don't have an account?
+          <a href="/register" class="text-blue-700 hover:underline font-medium transition">Register here</a>.
+        </p>
+        <p>
+          Forgot your password?
+          <a href="/forgot-password" class="text-blue-700 hover:underline font-medium transition">Reset it here</a>.
+        </p>
+        <p>
+          Back to <a href="/" class="text-blue-700 hover:underline font-medium transition">Home</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex text-gray-800">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg flex flex-col p-6 space-y-6">
+      <div class="text-2xl font-bold text-blue-600 tracking-wide">
+        MyApp
+      </div>
+      <nav class="flex flex-col gap-4">
+        <button onclick="location.href='/'" class="text-left px-4 py-2 rounded-md hover:bg-blue-100 transition">
+          🏠 Dashboard
+        </button>
+        <button onclick="location.href='/viewBlog'" class="text-left px-4 py-2 rounded-md hover:bg-blue-100 transition">
+          📝 View Blogs
+        </button>
+        <button onclick="location.href='/login'" class="text-left px-4 py-2 rounded-md hover:bg-blue-100 transition">
+          🔐 Login
+        </button>
+        <button onclick="location.href='/register'" class="text-left px-4 py-2 rounded-md hover:bg-blue-100 transition">
+          ✍️ Register
+        </button>
+      </nav>
+      <div class="mt-auto">
+        <p class="text-sm text-gray-400">© 2025 MyApp Inc.</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-10">
+      <div class="bg-white shadow-xl rounded-3xl p-10">
+        <h1 class="text-4xl font-bold mb-6">Welcome to the Posting Website</h1>
+        <p class="text-lg text-gray-600 mb-4">
+          This is your personalized dashboard. Use the side menu to navigate through features.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl p-6 shadow-md">
+            <h2 class="text-2xl font-semibold mb-2">Create Posts</h2>
+            <p class="text-sm">Start sharing your thoughts and ideas today.</p>
+          </div>
+          <div class="bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-xl p-6 shadow-md">
+            <h2 class="text-2xl font-semibold mb-2">View Blogs</h2>
+            <p class="text-sm">Read posts from yourself and others in the community.</p>
+          </div>
+          <div class="bg-gradient-to-r from-green-500 to-green-700 text-white rounded-xl p-6 shadow-md">
+            <h2 class="text-2xl font-semibold mb-2">Edit Profile</h2>
+            <p class="text-sm">Keep your profile up to date for better engagement.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
