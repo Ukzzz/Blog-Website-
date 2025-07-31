@@ -115,7 +115,40 @@ app.delete('/viewBlog/:id', authenticateUser, async (req, res) => {
     res.status(500).send('Delete failed');
   }
 });
+app.get('/edit/:id', authenticateUser, async (req, res) => {
+  try {
+    const blog = await Blog.findById(req.params.id);
+    if (!blog || blog.author.toString() !== req.user._id.toString()) {
+      return res.status(403).send('Not authorized');
+    }
+    res.render('edit', { blog });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Failed to load edit form');
+  }
+});
 
-app.listen(3000, () => {
-  console.log('Server running: http://localhost:3000');
+app.put('/viewBlog/:id', authenticateUser, async (req, res) => {
+  try {
+    const blog = await Blog.findById(req.params.id);
+    if (!blog || blog.author.toString() !== req.user._id.toString()) {
+      return res.status(403).send('Not authorized to update this blog');
+    }
+
+    // Update the blog fields
+    const { title, content } = req.body;
+    await blog.updateOne({ title, content });
+
+    res.redirect('/viewBlog');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Update failed');
+  }
+});
+
+
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`Server running: http://localhost:${PORT}`);
 });
